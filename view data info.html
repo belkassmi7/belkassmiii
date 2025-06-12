@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Fine Calculation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body class="system-bg">
+    <div class="main-card">
+        <div class="header-section">
+            <div class="library-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="brand-text">
+                    <h2>Library Management System</h2>
+                    <p>Fine Calculation Module</p>
+                </div>
+            </div>
+            <div class="user-section">
+                <div class="user-avatar">JD</div>
+                <div>
+                    <div>John Doe</div>
+                    <small>Librarian</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-area">
+            <div class="side-panel">
+                <div class="panel-title">
+                    <i class="fas fa-compass"></i> Navigation Panel
+                </div>
+                <div class="nav-buttons-container">
+                    <button class="nav-option">
+                        <i class="fas fa-search"></i> Book Search
+                    </button>
+                    <button class="nav-option">
+                        <i class="fas fa-database"></i> View Data Info
+                    </button>
+                    <button class="nav-option active-option">
+                        <i class="fas fa-book-return"></i> Return Book
+                    </button>
+                    <button class="nav-option">
+                        <i class="fas fa-shopping-basket"></i> Place Order
+                    </button>
+                    <button class="nav-option">
+                        <i class="fas fa-door-open"></i> Logout
+                    </button>
+                </div>
+            </div>
+            
+            <div class="details-panel">
+                <div class="section-header">
+                    <i class="fas fa-file-invoice"></i> Fine Calculation Details
+                </div>
+                
+                <div class="data-item">
+                    <div class="data-label">
+                        <i class="fas fa-user-tag"></i> Customer Identification
+                    </div>
+                    <div class="data-value">LIB-101-2023</div>
+                </div>
+                
+                <div class="search-area">
+                    <div class="data-label">
+                        <i class="fas fa-search-plus"></i> Book Search
+                    </div>
+                    <div class="search-input-group">
+                        <input type="text" class="search-field" id="bookQuery" placeholder="Enter book title or ID...">
+                        <button class="nav-option" style="padding: 0 24px;">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="date-grid">
+                    <div class="date-card">
+                        <div class="data-label">
+                            <i class="fas fa-calendar-alt"></i> Issue Date
+                        </div>
+                        <div class="date-value-display">Dec 12, 2021</div>
+                    </div>
+                    
+                    <div class="date-card">
+                        <div class="data-label">
+                            <i class="fas fa-calendar-times"></i> Due Date
+                        </div>
+                        <div class="date-value-display">Jan 12, 2022</div>
+                    </div>
+                </div>
+                
+                <button class="calculate-action" id="calcFineBtn">
+                    <i class="fas fa-calculator"></i> Calculate Fine Amount
+                </button>
+                
+                <div class="result-area" id="fineResult">
+                    <div class="result-header">
+                        <i class="fas fa-file-invoice-dollar"></i> Fine Calculation Summary
+                    </div>
+                    <div class="fine-total">$15.50</div>
+                    
+                    <div class="fine-grid">
+                        <div class="fine-detail-card">
+                            <div class="fine-label-text">Overdue Period</div>
+                            <div class="fine-value-text">31 days</div>
+                        </div>
+                        <div class="fine-detail-card">
+                            <div class="fine-label-text">Daily Rate</div>
+                            <div class="fine-value-text">$0.50/day</div>
+                        </div>
+                        <div class="fine-detail-card">
+                            <div class="fine-label-text">Base Fine</div>
+                            <div class="fine-value-text">$15.50</div>
+                        </div>
+                        <div class="fine-detail-card">
+                            <div class="fine-label-text">Additional Fees</div>
+                            <div class="fine-value-text">$0.00</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-note">
+                    <i class="fas fa-info-circle"></i> Note: Fines are calculated at a rate of $0.50 per day after the due date.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script2.js">
+        
+    </script>
+</body>
+</html>

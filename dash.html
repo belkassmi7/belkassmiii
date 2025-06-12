@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Library /IT Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css ">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="igl">
+    <button class="toggle-sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-section">
+            <h1>e-Library </h1>
+            <h2>Management<br>System</h2>
+        </div>
+        
+        <div class="menu-items">
+            <div class="menu-item active">
+                <i class="fas fa-book-medical"></i>
+                <span>Add Books</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-search"></i>
+                <span>Book Search</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-edit"></i>
+                <span>Book Update</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-list"></i>
+                <span>View Order</</span>
+            </div>
+            <div class="menu-item signout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Signout</span>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="header">
+            <h2><i class="fas fa-book-medical"></i> Add New Book</h2>
+            <div class="user-info">
+                <img src="https://ui-avatars.com/api/?name=Library+Admin&background=3498db&color=fff" alt="Admin">
+                <div>
+                    <div class="name">Alex Morgan</div>
+                    <div class="role">Library Administrator</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(52, 152, 219, 0.1); color: #3498db;">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-number">4,823</div>
+                    <div class="stat-title">Total Books</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(46, 204, 113, 0.1); color: #2ecc71;">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-number">3,215</div>
+                    <div class="stat-title">Available Books</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(231, 76, 60, 0.1); color: #e74c3c;">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-number">1,608</div>
+                    <div class="stat-title">Borrowed Books</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(155, 89, 182, 0.1); color: #9b59b6;">
+                    <i class="fas fa-list"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-number">327</div>
+                    <div class="stat-title">Pending Orders</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-container">
+            <div class="form-title">
+                <i class="fas fa-book"></i>
+                Book Information
+            </div>
+            
+            <form id="addBookForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="bookTitle"><i class="fas fa-heading"></i> Book Title</label>
+                        <input type="text" id="bookTitle" placeholder="Enter book title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="author"><i class="fas fa-user-edit"></i> Author</label>
+                        <input type="text" id="author" placeholder="Enter author name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="isbn"><i class="fas fa-barcode"></i> ISBN</label>
+                        <input type="text" id="isbn" placeholder="Enter ISBN number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="publisher"><i class="fas fa-building"></i> Publisher</label>
+                        <input type="text" id="publisher" placeholder="Enter publisher name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="publicationDate"><i class="fas fa-calendar-alt"></i> Publication Date</label>
+                        <input type="date" id="publicationDate">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="genre"><i class="fas fa-tags"></i> Genre</label>
+                        <select id="genre">
+                            <option value="">Select a genre</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="science">Science</option>
+                            <option value="technology">Technology</option>
+                            <option value="history">History</option>
+                            <option value="biography">Biography</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="language"><i class="fas fa-language"></i> Language</label>
+                        <select id="language">
+                            <option value="">Select language</option>
+                            <option value="english">English</option>
+                            <option value="french">French</option>
+                            <option value="spanish">Spanish</option>
+                            <option value="german">German</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pages"><i class="fas fa-file-alt"></i> Number of Pages</label>
+                        <input type="number" id="pages" placeholder="Enter number of pages">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description"><i class="fas fa-align-left"></i> Description</label>
+                    <textarea id="description" placeholder="Enter book description"></textarea>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="reset" class="btn btn-reset">
+                        <i class="fas fa-redo"></i> Reset Form
+                    </button>
+                    <button type="submit" class="btn btn-submit">
+                        <i class="fas fa-plus-circle"></i> Add Book
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="scripte.js"></script>
+</body>
+</html>

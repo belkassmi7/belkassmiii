@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Library Management System - Book Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body class="igl">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="#"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+            <li><a href="#"><i class="fas fa-book-medical"></i> <span>Add books</span></a></li>
+            <li><a href="#" class="active"><i class="fas fa-search"></i> <span>Book Search</span></a></li>
+            <li><a href="#"><i class="fas fa-edit"></i> <span>Book Update</span></a></li>
+            <li><a href="#"><i class="fas fa-list"></i> <span>View Order</span></a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> <span>Signout</span></a></li>
+        </ul>
+    </aside>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-book-open"></i>
+             <h1 class="qq">e-Library </h1>
+            <h2>Management<br>System</h2>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="page-title">
+            <h2><i class="fas fa-search"></i> Book Search</h2>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter book title, author, ISBN or keywords...">
+                <button id="searchButton"><i class="fas fa-search"></i> <span>Search</span></button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="categoryFilter">Category</label>
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="science">Science</option>
+                        <option value="history">History</option>
+                        <option value="biography">Biography</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="statusFilter">Availability</label>
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="available">Available</option>
+                        <option value="checked-out">Checked Out</option>
+                        <option value="reserved">Reserved</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sortFilter">Sort By</label>
+                    <select id="sortFilter">
+                        <option value="relevance">Relevance</option>
+                        <option value="title-asc">Title (A-Z)</option>
+                        <option value="title-desc">Title (Z-A)</option>
+                        <option value="author-asc">Author (A-Z)</option>
+                        <option value="year-desc">Publication Year (Newest)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-header">
+            <h3>Search Results</h3>
+            <div class="results-count">Showing 8 of 124 books</div>
+        </div>
+        
+        <div class="results-container">
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th>Category</th>
+                        <th>Year</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="book-cover"><i class="fas fa-book"></i></div></td>
+                        <td>The Great Gatsby</td>
+                        <td>F. Scott Fitzgerald</td>
+                        <td>978-0743273565</td>
+                        <td>Fiction</td>
+                        <td>1925</td>
+                        <td><span style="color:#27ae60;">Available</span></td>
+                        <td>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div class="book-cover"><i class="fas fa-book"></i></div></td>
+                        <td>To Kill a Mockingbird</td>
+                        <td>Harper Lee</td>
+                        <td>978-0446310789</td>
+                        <td>Fiction</td>
+                        <td>1960</td>
+                        <td><span style="color:#e74c3c;">Checked Out</span></td>
+                        <td>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div class="book-cover"><i class="fas fa-book"></i></div></td>
+                        <td>1984</td>
+                        <td>George Orwell</td>
+                        <td>978-0451524935</td>
+                        <td>Science Fiction</td>
+                        <td>1949</td>
+                        <td><span style="color:#f39c12;">Reserved</span></td>
+                        <td>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div class="book-cover"><i class="fas fa-book"></i></div></td>
+                        <td>Pride and Prejudice</td>
+                        <td>Jane Austen</td>
+                        <td>978-0141439518</td>
+                        <td>Classic</td>
+                        <td>1813</td>
+                        <td><span style="color:#27ae60;">Available</span></td>
+                        <td>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="scripte.js"></script>
+</body>
+</html>

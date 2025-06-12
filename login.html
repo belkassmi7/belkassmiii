@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - e-Library System</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="overlay">
+      <h1>e-Library<br>Management<br>System</h1>
+
+      <div class="login-box">
+        <div class="login-left">
+          <img src="https://media.istockphoto.com/id/949118068/photo/books.jpg?s=612x612&w=0&k=20&c=1vbRHaA_aOl9tLIy6P2UANqQ27KQ_gSF-BH0sUjQ730="alt="Books and Laptop"/>
+        </div>
+        <div class="login-right">
+          <form onsubmit="return handleLogin()">
+            <label for="username"><b><em>Username</em></b></label><br/>
+            <input type="text" id="username" required/><br/><br/>
+
+            <label for="password"><b><em>Password</em></b></label><br/>
+            <input type="password" id="password" required/><br/><br/>
+
+            <button type="submit"><em>login</em></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripte.js"></script>
+</body>
+</html>
